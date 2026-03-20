@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .login-box {
+            width: 500px;
+            margin-left:auto;
+            margin-right:auto;
+            border: 1px solid #ccc;
+            padding: 0 30px 30px 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-3 login-box">
+        <h3 style="text-align: center;">用户注册</h3>
+        <form action="/register" method="post">
+            <div class="mb-3 mt-3">
+                <label for="user_name">用户名：</label>
+                <input type="text" class="form-control" id="user_name" placeholder="请输入用户名" name="user_name">
+            </div>
+            <div class="mb-3 mt-3">
+                <label for="mobile">手机号：</label>
+                <input type="text" class="form-control" id="mobile" placeholder="请输入手机号" name="mobile">
+            </div>
+            <div class="mb-3">
+                <label for="password">密码：</label>
+                <input type="password" class="form-control" id="password" placeholder="请输入密码" name="password">
+            </div>
+            <div class="mb-3">
+                <label for="password_confirm">请再次输入密码：</label>
+                <input type="password" class="form-control" id="password_confirm" placeholder="请再次输入密码" name="password_confirm">
+            </div>
+            <button type="submit" class="btn btn-primary">注册</button>
+            <span style="color: red;">{{ error }}</span>
+        </form>
+
+    </div>
+
+</body>
+</html>
